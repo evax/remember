@@ -1,0 +1,15 @@
+{application, remember,
+ [
+  {description, "remember application"},
+  {vsn, "0.0.1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  sasl,
+                  lager,
+                  coord
+                 ]},
+    {mod, { remember_app, []}},
+  {env, []}
+ ]}.

@@ -1,0 +1,4 @@
+#! /bin/sh
+
+ERL_LIBS=deps erl -pa ebin -s remember -config config/sys -name ${1}@127.0.0.1
+
