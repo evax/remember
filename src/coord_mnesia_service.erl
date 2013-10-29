@@ -44,7 +44,7 @@ init(false, [First|_]=Nodes, _Opts) ->
     case mnesia_has_schema() of
         false ->
             lager:info("Remember: not yet part of the cluster, asking to join"),
-            rpc:call(First, coord_mnesia_backend, add_node, [node()]);
+            rpc:call(First, coord_mnesia_service, add_node, [node()]);
         _ ->
             lager:info("Remember: rejoining the cluster")
     end,
